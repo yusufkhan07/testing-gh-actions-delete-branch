@@ -2,11 +2,12 @@ name: delete branch on close pr
 on: 
   pull_request:
     branches:
-         - develop
+      - develop
     types: [closed]
   
 jobs:
   delete-branch:
+    if: github.event.pull_request.merged == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: delete branch
