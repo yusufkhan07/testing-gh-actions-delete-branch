@@ -2,7 +2,7 @@ name: delete branch on close pr
 on: 
   pull_request:
     branches:
-         - develop
+      - develop
     types: [closed]
   
 jobs:
